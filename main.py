@@ -1,6 +1,7 @@
 import pygame
 from constants import SCREEN_WIDTH, SCREEN_HEIGHT
 from constants import ASTEROID_MIN_RADIUS, ASTEROID_KINDS, ASTEROID_SPAWN_RATE, ASTEROID_MAX_RADIUS
+from constants import PLAYER_RADIUS, PLAYER_ROTATION_SPEED
 from player import Player
 
 def main():
@@ -17,6 +18,8 @@ def main():
             
         #main_screen.fill("black")
         main_screen.fill((0,0,0))
+        
+        player.update(dt)
         player.draw(main_screen)
         pygame.display.flip()
 
